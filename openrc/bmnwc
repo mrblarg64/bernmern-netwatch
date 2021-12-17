@@ -1,0 +1,16 @@
+#!/sbin/openrc-run
+command=/usr/local/bin/bmnwc
+command_args="4 142.165.167.151 3433"
+pidfile=/var/run/bernmern/bmnwc.pid
+name="bernmern.net watch client"
+
+depend() {
+    need net
+}
+
+start_pre() {
+}
+
+stop_post() {
+}
+

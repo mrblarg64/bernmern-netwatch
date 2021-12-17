@@ -1,0 +1,16 @@
+#!/sbin/openrc-run
+command=/usr/bin/spawn-fcgi
+command_args="-p 8000 -u 5001 -n /usr/local/bin/bmnws 4 10.6.6.7 3432 3433"
+pidfile=/var/run/bernmern/bmnws.pid
+name="bernmern.net watch server"
+
+depend() {
+    need net
+}
+
+start_pre() {
+}
+
+stop_post() {
+}
+

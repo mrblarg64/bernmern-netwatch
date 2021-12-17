@@ -1,0 +1,16 @@
+#!/sbin/openrc-run
+command=/usr/local/bin/bmnwuc
+command_args="4 142.165.167.151 3432"
+pidfile=/var/run/bernmern/bmnwuc.pid
+name="bernmern.net watch unencrypted client"
+
+depend() {
+    need net
+}
+
+start_pre() {
+}
+
+stop_post() {
+}
+
